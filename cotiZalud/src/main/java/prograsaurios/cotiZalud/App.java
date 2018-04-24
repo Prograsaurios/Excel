@@ -1,19 +1,16 @@
 package prograsaurios.cotiZalud;
+
 import java.util.Scanner;
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-    	Scanner sc=new Scanner(System.in);
-    	String tipo="";
-    	System.out.println("Escriba tipo:\nmedicamento \nfarmacia" );
-    	tipo=sc.nextLine();
-    	System.out.println("Escriba su busqueda"); 
-    	String palabra=sc.nextLine();
-        Buscador.buscador(tipo,palabra);
-        }
-    }
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+
+public class App {
+	public static void main(String[] args) {
+		Controlador control=new Controlador();
+		control.mostrar_lista();
+		control.elegir_medicamento();
+		control.verCliente();
+		}
+	
+	}
