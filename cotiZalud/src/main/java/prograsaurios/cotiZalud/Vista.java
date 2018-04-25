@@ -5,17 +5,17 @@ import java.util.Scanner;
 public class Vista {
 	Controlador controlador;
 	Scanner sc;
-	
+
 	public Vista(Controlador controlador) {
 		this.controlador = controlador;
 		sc = new Scanner(System.in); //Revisar si dejar como variable global
 		this.ingreso_datos();
 	}
-	
+
 	public void mostrar_lista() {
 		System.out.println(this.controlador.generar_lista());
 	}
-	
+
 	public void ingreso_datos() {
 		String tipo;
 		String consulta;
@@ -27,12 +27,12 @@ public class Vista {
 		this.mostrar_lista();
 		this.elegir_medicamento();
 	}
-	
+
 	public void elegir_medicamento() {
 		System.out.println("Elija medicamento (código)"); 
 		System.out.println(this.controlador.elegir_medicamento(sc.nextInt(), this));
 	}
-	
+
 	public void mas_medicamento() {
 		System.out.println("¿Desea otro medicamento? 1) Sí 2) No");
 		int op = sc.nextInt();
@@ -49,7 +49,7 @@ public class Vista {
 			break;
 		}
 	}
-	
+
 	public void ver_cliente(){
 		System.out.println(this.controlador.datos_cliente());
 	}

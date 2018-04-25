@@ -37,17 +37,17 @@ public class Datos {
 			if (cell.toString().equals(tipo)) {
 				index = cell.getColumnIndex();
 				break;
-				}
 			}
+		}
 		lista.add(sheet1.getRow(0));
-		
+
 		for (Row row : sheet1) {
 			if (row.getCell(index).toString().equals(palabra)) {
 				lista.add(row);
 			}
 		}
 	}	
-	
+
 	public void restriccion(String palabra,String tipo){
 		int index = 0;
 		for (Cell cell : lista.get(0)) {

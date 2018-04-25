@@ -14,22 +14,22 @@ public class Controlador {
 		this.datos = new Datos();
 		this.cliente = cliente;
 	}
-	
+
 	public String generar_lista() {
 		String resultado = "";
 		for (Row row : datos.getLista()) {
 			for (Cell cell : row) {
 				resultado = resultado + cell.toString() + "\t | \t";
-				}
-			resultado = resultado + "\n";
 			}
+			resultado = resultado + "\n";
+		}
 		return resultado;
 	}
-	
+
 	public void busca_fila(String tipo, String consulta) {
 		this.datos.busca_fila(tipo, consulta);
 	}
-	
+
 	public String elegir_medicamento(int codigo, Vista vista) {
 		String resultado = "";
 		for (Row row : datos.getLista()) {
@@ -46,7 +46,7 @@ public class Controlador {
 		vista.mas_medicamento();
 		return resultado;
 	}
-	
+
 	public String datos_cliente() {
 		return cliente.getNombre()+"\n"+cliente.getDinero()+"\n"+cliente.getMedicamentos()+"\n"+cliente.getPreciototal_medicamentos();
 	}
