@@ -1,7 +1,6 @@
 package prograsaurios.cotiZalud;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class Cliente {
 	private String nombre;
@@ -14,12 +13,15 @@ public class Cliente {
 		this.dinero=dinero;
 		this.medicamentos=new  ArrayList<Medicamento>();
 	}
+	
 	public void addMedicamentos(Medicamento med) {
 		this.medicamentos.add(med);
 	}
+	
 	public void delMedicamentos(int indice) {
 		this.medicamentos.remove(indice);
 	}
+	
 	public String getMedicamentos() {
 		return medicamentos.toString();
 	}
@@ -27,26 +29,23 @@ public class Cliente {
 	public String getNombre() {
 		return nombre;
 	}
+	
 	public double getDinero() {
 		return dinero;
 	}
+	
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+	
 	public void setDinero(int dinero) {
 		this.dinero = dinero;
 	}
+	
 	public double getPreciototal_medicamentos() {
 		for(int index=0;index<medicamentos.size();index++) {
 			preciototal_medicamentos+=+medicamentos.get(index).getPrecio();
 		}
 		return preciototal_medicamentos;
 	}
-	public String toString() {
-		String verCliente=getNombre()+"\n"+getDinero()+"\n"+getMedicamentos()+"\n"+getPreciototal_medicamentos();
-		return verCliente;
-	}
-	
-	
-	
 }

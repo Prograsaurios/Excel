@@ -12,10 +12,10 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 
 public class Datos {
-	InputStream inp;
-	HSSFWorkbook wb;
-	Sheet sheet1; // se elije la hoja del excel wb
-	ArrayList<Row> lista = new ArrayList<Row>();
+	private InputStream inp;
+	private HSSFWorkbook wb;
+	private Sheet sheet1; // se elije la hoja del excel wb
+	private ArrayList<Row> lista = new ArrayList<Row>();
 
 	public Datos() {
 		setDatos();
@@ -62,6 +62,13 @@ public class Datos {
 				lista.add(row);
 			}
 		}
-		
+	}
+
+	public ArrayList<Row> getLista() {
+		return lista;
+	}
+
+	public void setLista(ArrayList<Row> lista) {
+		this.lista = lista;
 	}
 }

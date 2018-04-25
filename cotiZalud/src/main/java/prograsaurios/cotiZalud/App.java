@@ -1,16 +1,12 @@
 package prograsaurios.cotiZalud;
 
-import java.util.Scanner;
-
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-
 public class App {
 	public static void main(String[] args) {
-		Controlador control=new Controlador();
-		control.mostrar_lista();
-		control.elegir_medicamento();
-		control.verCliente();
+		Controlador controlador = new Controlador(new Cliente("Prograsaurio", 1000));
+		Vista vista = new Vista(controlador);
+		
+		vista.mostrar_lista();
+		vista.elegir_medicamento();
+		vista.ver_cliente();
 		}
-	
 	}
