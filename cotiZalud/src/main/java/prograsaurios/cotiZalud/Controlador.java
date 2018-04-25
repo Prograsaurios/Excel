@@ -73,6 +73,6 @@ public class Controlador {
 	}
 	
 	public void verCliente(){
-		System.out.println(cliente.getNombre()+"\n"+cliente.getDinero()+"\n"+cliente.getMedicamentos()+"\n"+cliente.getPreciototal_medicamentos());
+		System.out.println(cliente.toString());
 	}
 }

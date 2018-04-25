@@ -42,6 +42,11 @@ public class Cliente {
 		}
 		return preciototal_medicamentos;
 	}
+	public String toString() {
+		String verCliente=getNombre()+"\n"+getDinero()+"\n"+getMedicamentos()+"\n"+getPreciototal_medicamentos();
+		return verCliente;
+	}
+	
 	
 	
 }
