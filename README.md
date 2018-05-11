@@ -1,8 +1,8 @@
 # cotiZalud
-Introducir parametros de tipo:
+Introducir parámetros de tipo:
 
-a) Medicamento --> Buscar medicamento por su nombre en mayusculas
+a) Medicamento --> Buscar medicamento por su nombre en mayúsculas.
 
-b) Región --> Buscar medicamento por Región (Metropolitana,Antogasta,Atacama,Coquimbo,Valparaíso,O'higgins,Maule,Bio-bío,Araucanía,Los Ríos,Los Lagos,Aysén,Magallanes)
+b) Región --> Buscar medicamento por Región (Metropolitana,Antofagasta,Atacama,Coquimbo,Valparaíso,O'higgins,Maule,Bio-bío,Araucanía,Los Ríos,Los Lagos,Aysén ó Magallanes),escribir tal cual.
 
-c) Farmacia --> Buscar medicamento por Farmacia (Cruz Verde, Salcobrand,Ahumada)
+c) Farmacia --> Buscar medicamento por Farmacia (Cruz Verde, Salcobrand ó Ahumada),escribir tal cual.
