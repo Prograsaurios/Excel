@@ -19,7 +19,7 @@ public class Vista {
 	public void ingreso_datos() {
 		String tipo;
 		String consulta;
-		System.out.println("Escriba tipo:\nmedicamento \nregión \nfarmacia ");
+		System.out.println("Escriba tipo:\nMedicamento \nRegión \nFarmacia ");
 		tipo = sc.nextLine();
 		System.out.println("Escriba su búsqueda");
 		consulta = sc.nextLine();
