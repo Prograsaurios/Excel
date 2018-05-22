@@ -1,4 +1,4 @@
-package prograsaurios.cotiZalud;
+package cotizalud.cotiZalud;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -10,7 +10,7 @@ import org.apache.poi.poifs.filesystem.POIFSFileSystem;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
-import com.mysql.*;
+
 public class Datos {
 	private InputStream inp;
 	private HSSFWorkbook wb;
@@ -39,7 +39,7 @@ public class Datos {
 				break;
 			}
 		}
-		lista.add(sheet1.getRow(0)); //Agrega encabezado (Nombre,marca,etc) a la lista que se muestra
+		lista.add(sheet1.getRow(0));
 
 		for (Row row : sheet1) {
 			if (row.getCell(index).toString().equals(palabra)) {
@@ -47,6 +47,18 @@ public class Datos {
 			}
 		}
 	}	
+        public void araucania(){
+        for (Row row : sheet1) {
+			if (row.getCell(6).toString().equals("Araucanía")) {
+				lista.add(row);
+			}
+		}
+        }
+        public void lista(){
+        for (Row fila:lista){
+        String medicamento=fila.getCell(1).getStringCellValue();
+                }
+        }
 
 	public void restriccion(String palabra,String tipo){
 		int index = 0;
