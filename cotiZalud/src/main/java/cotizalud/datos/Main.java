@@ -15,8 +15,12 @@ import org.apache.poi.ss.usermodel.Row;
 public class Main {
     public static void main(String[] args) throws SQLException{
         DB co = new DB();
+<<<<<<< HEAD
         co.usarDatabase("cotizalud");
         co.crearTabla("cotizalud","medicamentos");
+=======
+        //co.crearTabla("medicamentos");
+>>>>>>> 3461cda15eddd7f62fc91a0285360d68b85d1e7a
         co.importarExcel();
         co.desconectar();
     }

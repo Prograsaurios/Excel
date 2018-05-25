@@ -51,10 +51,17 @@ public class DB { //mySQL DataBase
         conn.close();//por si acaso lo de arriba no funciona
     }
     
+<<<<<<< HEAD
     public void usarDatabase(String database){
         try {
             Statement sent=conn.createStatement();
             String crear= "CREATE DATABASE IF NOT EXISTS "+database+";";
+=======
+    public void crearDatabase(String database){
+        try {
+            Statement sent=conn.createStatement();
+            String crear= "create database "+database+";";
+>>>>>>> 3461cda15eddd7f62fc91a0285360d68b85d1e7a
             String usar="use "+database+",";
             sent.execute(crear);
             sent.execute(usar);
@@ -65,9 +72,15 @@ public class DB { //mySQL DataBase
     
     }
 
+<<<<<<< HEAD
     public void crearTabla(String database,String tabla) throws SQLException {
         Statement sent = conn.createStatement();
         String query = String.format("CREATE TABLE IF NOT EXISTS `%s`.`%s` ( `id` INT NOT NULL AUTO_INCREMENT , `medicamento` TEXT NOT NULL , `dosis` TEXT NOT NULL , `presentación` TEXT NOT NULL ,`marca` TEXT NOT NULL, `farmacia` TEXT NOT NULL , `precio` INT NOT NULL , `direccion` TEXT NOT NULL,`comuna` TEXT NOT NULL ,`region` TEXT NOT NULL, PRIMARY KEY (`id`)) ENGINE = InnoDB;",database,tabla);
+=======
+    public void crearTabla(String tabla) throws SQLException {
+        Statement sent = conn.createStatement();
+        String query = String.format("CREATE TABLE `cotiZalud`.`%s` ( `id` INT NOT NULL AUTO_INCREMENT , `medicamento` TEXT NOT NULL , `dosis` TEXT NOT NULL , `presentación` TEXT NOT NULL ,`marca` TEXT NOT NULL, `farmacia` TEXT NOT NULL , `precio` INT NOT NULL , `direccion` TEXT NOT NULL,`comuna` TEXT NOT NULL ,`region` TEXT NOT NULL, PRIMARY KEY (`id`)) ENGINE = InnoDB;",tabla);
+>>>>>>> 3461cda15eddd7f62fc91a0285360d68b85d1e7a
         sent.execute(query);
 
     }
