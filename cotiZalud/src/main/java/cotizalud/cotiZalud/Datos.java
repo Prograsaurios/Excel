@@ -1,4 +1,4 @@
-package prograsaurios.cotiZalud;
+package cotizalud.cotiZalud;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -47,6 +47,18 @@ public class Datos {
 			}
 		}
 	}	
+        public void araucania(){
+        for (Row row : sheet1) {
+			if (row.getCell(6).toString().equals("Araucanía")) {
+				lista.add(row);
+			}
+		}
+        }
+        public void lista(){
+        for (Row fila:lista){
+        String medicamento=fila.getCell(1).getStringCellValue();
+                }
+        }
 
 	public void restriccion(String palabra,String tipo){
 		int index = 0;

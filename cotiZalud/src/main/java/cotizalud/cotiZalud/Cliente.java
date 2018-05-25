@@ -1,4 +1,4 @@
-package prograsaurios.cotiZalud;
+package cotizalud.cotiZalud;
 
 import java.util.ArrayList;
 

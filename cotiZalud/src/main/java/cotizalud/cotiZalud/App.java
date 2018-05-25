@@ -1,4 +1,4 @@
-package prograsaurios.cotiZalud;
+package cotizalud.cotiZalud;
 
 public class App {
 	public static void main(String[] args) {

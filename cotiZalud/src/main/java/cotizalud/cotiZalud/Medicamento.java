@@ -1,4 +1,4 @@
-package prograsaurios.cotiZalud;
+package cotizalud.cotiZalud;
 
 public class Medicamento {
 	private String nombre;
