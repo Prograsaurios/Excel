@@ -1,0 +1,16 @@
+---final semestre---
+{
+! Listo clases de paquete Datos(Bueno casi) (Se intento usar Apache Derby y SQLite para base de datos embebidda pero no funciono con estas, se usa actual% H2)
+# Falta
+Hacer reportes
+Usar de mejor manera las clases modelo (Medicamento y Usuario)
+Separar los componentes de TablaBusquedas y crear sus propias clases(Especialmente JTable)
+Si es necesario hacer clases para las clases anonimas que tiene JTable
+Implementar lo pedido por el profesor
+}
+------------------------------------------------------
+---No necesario para proyecto final de semestre------
+{
+Mejorar rapidez de actualizacion
+Menores Contenidos en una fila. hacer que cuando se seleccione el medicamento salgan las demas columnas.
+}

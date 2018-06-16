@@ -32,42 +32,27 @@ public class Descarga {
         this.folder = "descargas/";
         this.name = "medicamentos.xls";
         this.dir = new File(folder);
-        crearCarpeta();
         descargar();
     }
-
-    /**
-     * Crea carpeta si no existe
-     */
-    public void crearCarpeta(){
-            if (!dir.exists()) {
-            if (!dir.mkdir()) {
-                return; // no se pudo crear la carpeta de destino
-            }
-        }}
 
     /**
      * Descarga archivo de la página del SIP
      * @throws MalformedURLException
      * @throws IOException
      */
-    @SuppressWarnings("ConvertToTryWithResources")
-    public void descargar() throws MalformedURLException, IOException {
+    private void descargar() throws MalformedURLException, IOException {
         File file = new File(folder + name);
         URLConnection conn = new URL(url).openConnection();
         conn.connect();
         System.out.println("\nempezando descarga: \n");
-        InputStream in = conn.getInputStream();
-        OutputStream out = new FileOutputStream(file);
-        int b = 0;
-        while (b != -1) {
-            b = in.read();
-            if (b != -1) {
-                out.write(b);
+        try (InputStream in = conn.getInputStream(); OutputStream out = new FileOutputStream(file)) {
+            int b = 0;
+            while (b != -1) {
+                b = in.read();
+                if (b != -1) {
+                    out.write(b);
+                }
             }
         }
-        out.close();
-        in.close();
-
     }
 }

@@ -5,7 +5,6 @@
  */
 package cotizalud.Datos;
 
-
 import java.io.*;
 import net.htmlparser.jericho.*;
 
@@ -30,7 +29,9 @@ public class ConvertidorTXT {
         this.dirHTML = dirHTML;
         this.preTexto = new Source(inp).getRenderer();
         preTexto.setMaxLineLength(0);
-        this.texto = preTexto.toString();
+        preTexto.setTableCellSeparator(";");
+        preTexto.setNewLine("\n");
+        this.texto = "ID;"+preTexto.toString();
         System.out.println("Preprocesado de texto listo");
         toTxt();
     }
@@ -39,7 +40,7 @@ public class ConvertidorTXT {
      * Escribe en un archivo texto los datos
      * @throws Exception
      */
-    public void toTxt() throws Exception {
+    private void toTxt() throws Exception {
         BufferedWriter bw;
         bw = new BufferedWriter(new FileWriter("descargas/medicamentos.txt"));
         bw.write(this.texto);
