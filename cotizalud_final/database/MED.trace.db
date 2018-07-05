@@ -1,0 +1,60 @@
+2018-07-05 14:20:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "MEDS" no encontrada
+Table "MEDS" not found; SQL statement:
+SELECT * FROM MEDS WHERE 1=1  AND región like '%Arica%' AND farmacía = 'Cruz Verde' [42102-197]
+2018-07-05 14:20:02 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "MEDS" no encontrada
+Table "MEDS" not found; SQL statement:
+SELECT * FROM MEDS WHERE 1=1  AND región like '%Arica%' AND farmacía = 'Cruz Verde' [42102-197]
+2018-07-05 14:20:06 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "MEDS" no encontrada
+Table "MEDS" not found; SQL statement:
+SELECT * FROM MEDS WHERE 1=1  AND región like '%Arica%' AND farmacía = 'Cruz Verde' [42102-197]
+2018-07-05 14:20:07 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "MEDS" no encontrada
+Table "MEDS" not found; SQL statement:
+SELECT * FROM MEDS WHERE 1=1  AND región like '%Arica%' AND farmacía = 'Cruz Verde' [42102-197]
+2018-07-05 14:20:07 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "MEDS" no encontrada
+Table "MEDS" not found; SQL statement:
+SELECT * FROM MEDS WHERE 1=1  AND región like '%Arica%' AND farmacía = 'Cruz Verde' [42102-197]
+2018-07-05 14:20:07 jdbc[8]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "MEDS" no encontrada
+Table "MEDS" not found; SQL statement:
+SELECT * FROM MEDS WHERE 1=1  AND región like '%Arica%' AND farmacía = 'Cruz Verde' [42102-197]
+2018-07-05 14:20:07 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "MEDS" no encontrada
+Table "MEDS" not found; SQL statement:
+SELECT * FROM MEDS WHERE 1=1  AND región like '%Arica%' AND farmacía = 'Cruz Verde' [42102-197]
+2018-07-05 14:20:11 jdbc[10]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "MEDS" no encontrada
+Table "MEDS" not found; SQL statement:
+SELECT * FROM MEDS WHERE 1=1  AND región like '%Arica%' AND medicamento LIKE '%PAR%' AND farmacía = 'Cruz Verde' [42102-197]
+2018-07-05 14:20:14 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "MEDS" no encontrada
+Table "MEDS" not found; SQL statement:
+SELECT * FROM MEDS WHERE 1=1  AND región like '%Arica%' AND medicamento LIKE '%PAR%' AND farmacía = 'Cruz Verde' [42102-197]
+2018-07-05 14:20:14 jdbc[12]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "MEDS" no encontrada
+Table "MEDS" not found; SQL statement:
+SELECT * FROM MEDS WHERE 1=1  AND región like '%Arica%' AND medicamento LIKE '%PAR%' AND farmacía = 'Cruz Verde' [42102-197]
+2018-07-05 14:20:14 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "MEDS" no encontrada
+Table "MEDS" not found; SQL statement:
+SELECT * FROM MEDS WHERE 1=1  AND región like '%Arica%' AND medicamento LIKE '%PAR%' AND farmacía = 'Cruz Verde' [42102-197]
+2018-07-05 14:20:24 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "MEDS" no encontrada
+Table "MEDS" not found; SQL statement:
+SELECT * FROM MEDS WHERE 1=1  AND región like '%Arica%' AND medicamento LIKE '%PARACETAMOL%' AND farmacía = 'Cruz Verde' [42102-197]
+2018-07-05 14:20:24 jdbc[15]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "MEDS" no encontrada
+Table "MEDS" not found; SQL statement:
+SELECT * FROM MEDS WHERE 1=1  AND región like '%Arica%' AND medicamento LIKE '%PARACETAMOL%' AND farmacía = 'Cruz Verde' [42102-197]
+2018-07-05 14:20:24 jdbc[16]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "MEDS" no encontrada
+Table "MEDS" not found; SQL statement:
+SELECT * FROM MEDS WHERE 1=1  AND región like '%Arica%' AND medicamento LIKE '%PARACETAMOL%' AND farmacía = 'Cruz Verde' [42102-197]
+2018-07-05 14:20:25 jdbc[17]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "MEDS" no encontrada
+Table "MEDS" not found; SQL statement:
+SELECT * FROM MEDS WHERE 1=1  AND región like '%Arica%' AND medicamento LIKE '%PARACETAMOL%' AND farmacía = 'Cruz Verde' [42102-197]
