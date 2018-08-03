@@ -5,7 +5,7 @@
  */
 package cotizalud.GUI;
 
-import cotizalud.Contexto.Buscador;
+import cotizalud.Contexto.Medicamento;
 import cotizalud.GUI.util.Tabla_Medicamentos;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -47,8 +47,7 @@ public class GUI_Medicamentos extends JTable{
     
     public DefaultTableModel loadMedicamentos(String region, String medicamento, String farmacia) {
         try {
-            Buscador busca = new Buscador(region, medicamento, farmacia);
-            Object[] arreglo = new Object[10];
+            Medicamento busca = new Medicamento(region, medicamento, farmacia);
             ResultSet rs = busca.resp("MEDS");
             DefaultTableModel dtm = new Tabla_Medicamentos();
 
@@ -64,17 +63,17 @@ public class GUI_Medicamentos extends JTable{
             dtm.addColumn("REGIÓN");
           
             while (rs.next()) {
-                arreglo[0] = rs.getInt("id");
-                arreglo[1] = rs.getString("medicamento");
-                arreglo[2] = rs.getString("dosis");
-                arreglo[3] = rs.getString("presentación");
-                arreglo[4] = rs.getString("marca");
-                arreglo[5] = rs.getString("farmacía");
-                arreglo[6] = rs.getInt("precio");
-                arreglo[7] = rs.getString("dirección");
-                arreglo[8] = rs.getString("comuna");
-                arreglo[9] = rs.getString("región");
-                dtm.addRow(arreglo);
+                busca.setCodigo(rs.getInt("id"));
+                busca.setMedicamento(rs.getString("medicamento"));
+                busca.setDosis(rs.getString("dosis"));
+                busca.setPresentacion(rs.getString("presentación"));
+                busca.setMarca(rs.getString("marca"));
+                busca.setFarmacia(rs.getString("farmacía"));
+                busca.setPrecio(rs.getInt("precio"));
+                busca.setDireccion(rs.getString("dirección"));
+                busca.setComuna(rs.getString("comuna"));
+                busca.setRegion(rs.getString("región"));
+                dtm.addRow(busca.toArray());
             }
             busca.getDb().desconectar();
             return dtm;

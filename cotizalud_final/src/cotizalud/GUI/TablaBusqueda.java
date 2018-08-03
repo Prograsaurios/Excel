@@ -7,7 +7,6 @@ package cotizalud.GUI;
 
 import cotizalud.Datos.Reporte;
 import cotizalud.Contexto.Medicamento;
-import cotizalud.Contexto.Buscador;
 import cotizalud.Datos.DB;
 import cotizalud.GUI.util.*;
 import java.awt.Component;
@@ -54,7 +53,7 @@ public class TablaBusqueda extends JFrame {
     public DefaultTableModel loadMedicamentos(String region, String medicamento, String farmacia) {
 
         try {
-            Buscador busca = new Buscador(region, medicamento, farmacia);
+            Medicamento busca = new Medicamento(region, medicamento, farmacia);
             Object[] arreglo = new Object[10];
             ResultSet rs = busca.resp("MEDS");
             DefaultTableModel dtm = new Tabla_Medicamentos();
@@ -162,7 +161,6 @@ public class TablaBusqueda extends JFrame {
     }
 
     public void consultarProductos() {
-        Medicamento m = new Medicamento();
         String region = (String) cRegiones.getSelectedItem();
         String medicamento = campoMedicamento.getText();
         String farmacia = (String) cFarmacias.getSelectedItem();

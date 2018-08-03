@@ -5,12 +5,7 @@
  */
 package cotizalud.Main;
 
-import cotizalud.GUI.GUI_Busqueda;
 import cotizalud.GUI.GUI_Main;
-import cotizalud.GUI.GUI_Medicamentos;
-import cotizalud.GUI.TablaBusqueda;
-import javax.swing.JFrame;
-import javax.swing.JScrollPane;
 
 /**
  * Clase principal
