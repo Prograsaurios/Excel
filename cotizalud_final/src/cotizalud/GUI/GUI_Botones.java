@@ -29,6 +29,38 @@ public class GUI_Botones extends JPanel implements ActionListener{
         initComponents();
     }
 
+    public JButton getBtnAgregar() {
+        return btnAgregar;
+    }
+
+    public void setBtnAgregar(JButton btnAgregar) {
+        this.btnAgregar = btnAgregar;
+    }
+
+    public JButton getBtnEliminar() {
+        return btnEliminar;
+    }
+
+    public void setBtnEliminar(JButton btnEliminar) {
+        this.btnEliminar = btnEliminar;
+    }
+
+    public JButton getBtnReporte() {
+        return btnReporte;
+    }
+
+    public void setBtnReporte(JButton btnReporte) {
+        this.btnReporte = btnReporte;
+    }
+
+    public JButton getBtnSalir() {
+        return btnSalir;
+    }
+
+    public void setBtnSalir(JButton btnSalir) {
+        this.btnSalir = btnSalir;
+    }
+
     public void initComponents() {
         btnAgregar=new JButton("Agregar");
         btnEliminar=new JButton("Eliminar");
@@ -52,10 +84,10 @@ public class GUI_Botones extends JPanel implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        if (ae.getSource()==btnAgregar){}
-        if (ae.getSource()==btnEliminar){}
-        if (ae.getSource()==btnReporte){}
-        if (ae.getSource()==btnSalir){}
+        if (ae.getSource()==getBtnAgregar()){}
+        if (ae.getSource()==getBtnEliminar()){}
+        if (ae.getSource()==getBtnReporte()){}
+        if (ae.getSource()==getBtnSalir()){}
 
 
     }

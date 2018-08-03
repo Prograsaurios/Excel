@@ -47,8 +47,8 @@ public class GUI_Medicamentos extends JTable{
     
     public DefaultTableModel loadMedicamentos(String region, String medicamento, String farmacia) {
         try {
-            Medicamento busca = new Medicamento(region, medicamento, farmacia);
-            ResultSet rs = busca.resp("MEDS");
+            Medicamento med = new Medicamento(region, medicamento, farmacia);
+            ResultSet rs = med.resp("MEDS");
             DefaultTableModel dtm = new Tabla_Medicamentos();
 
             dtm.addColumn("ID");
@@ -63,19 +63,19 @@ public class GUI_Medicamentos extends JTable{
             dtm.addColumn("REGIÓN");
           
             while (rs.next()) {
-                busca.setCodigo(rs.getInt("id"));
-                busca.setMedicamento(rs.getString("medicamento"));
-                busca.setDosis(rs.getString("dosis"));
-                busca.setPresentacion(rs.getString("presentación"));
-                busca.setMarca(rs.getString("marca"));
-                busca.setFarmacia(rs.getString("farmacía"));
-                busca.setPrecio(rs.getInt("precio"));
-                busca.setDireccion(rs.getString("dirección"));
-                busca.setComuna(rs.getString("comuna"));
-                busca.setRegion(rs.getString("región"));
-                dtm.addRow(busca.toArray());
+                med.setCodigo(rs.getInt("id"));
+                med.setMedicamento(rs.getString("medicamento"));
+                med.setDosis(rs.getString("dosis"));
+                med.setPresentacion(rs.getString("presentación"));
+                med.setMarca(rs.getString("marca"));
+                med.setFarmacia(rs.getString("farmacía"));
+                med.setPrecio(rs.getInt("precio"));
+                med.setDireccion(rs.getString("dirección"));
+                med.setComuna(rs.getString("comuna"));
+                med.setRegion(rs.getString("región"));
+                dtm.addRow(med.toArray());
             }
-            busca.getDb().desconectar();
+            med.getDb().desconectar();
             return dtm;
         } catch (SQLException e) {
             System.out.println(e);

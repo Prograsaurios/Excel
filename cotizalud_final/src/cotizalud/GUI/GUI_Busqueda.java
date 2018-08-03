@@ -28,14 +28,13 @@ import javax.swing.SwingConstants;
  *
  * @author raguileoam
  */
-public class GUI_Busqueda extends JPanel implements ActionListener{
+public class GUI_Busqueda extends JPanel{
     private JComboBox<String> cFarmacias;
     private JComboBox<String> cRegiones;
     private JTextField tfMedicamento;
     private JLabel lMedicamento;
     private JLabel lRegion;
     private JLabel lFarmacia;
-    private JLabel logo;
     private JPanel pCentro;
     private JButton buscar;
     private JPanel pSur;
@@ -64,6 +63,22 @@ public class GUI_Busqueda extends JPanel implements ActionListener{
     void initPanel(){
     
     }
+
+    public JButton getBuscar() {
+        return buscar;
+    }
+
+    public void setBuscar(JButton buscar) {
+        this.buscar = buscar;
+    }
+
+    public JButton getActualizar() {
+        return actualizar;
+    }
+
+    public void setActualizar(JButton actualizar) {
+        this.actualizar = actualizar;
+    }
     void addComponents(){
         
     pCentro.add(lFarmacia);
@@ -75,34 +90,38 @@ public class GUI_Busqueda extends JPanel implements ActionListener{
     this.add(pCentro,BorderLayout.CENTER);
     
     pSur.add(buscar);
-    buscar.addActionListener(this);
     this.add(pSur,BorderLayout.SOUTH);
     
     pNorte.add(actualizar,BorderLayout.EAST);
-    actualizar.addActionListener(this);
+    
   
     this.add(pNorte,BorderLayout.NORTH);    
     }
 
-    @Override
-    public void actionPerformed(ActionEvent ae) {
-        if(ae.getSource()==buscar){
-            System.out.print("Buscando...");
-            consultarProductos();
-        }
-        if(ae.getSource()==actualizar){
-            System.out.print("Actualizando...");
-            actualizar();
+    public JComboBox<String> getcFarmacias() {
+        return cFarmacias;
+    }
 
-        }
+    public void setcFarmacias(JComboBox<String> cFarmacias) {
+        this.cFarmacias = cFarmacias;
     }
-    
-      public void consultarProductos() {
-        String region = (String) cRegiones.getSelectedItem();
-        String medicamento = tfMedicamento.getText();
-        String farmacia = (String) cFarmacias.getSelectedItem();
-        //setModel(loadMedicamentos(region, medicamento, farmacia));
+
+    public JComboBox<String> getcRegiones() {
+        return cRegiones;
     }
+
+    public void setcRegiones(JComboBox<String> cRegiones) {
+        this.cRegiones = cRegiones;
+    }
+
+    public JTextField getTfMedicamento() {
+        return tfMedicamento;
+    }
+
+    public void setTfMedicamento(JTextField tfMedicamento) {
+        this.tfMedicamento = tfMedicamento;
+    }
+
       
     public void actualizar(){
                         // TODO add your handling code here:
@@ -121,4 +140,6 @@ public class GUI_Busqueda extends JPanel implements ActionListener{
             JOptionPane.showMessageDialog(null, "Error en la actualización.", "CotiZalud Informa:", JOptionPane.ERROR_MESSAGE);
         }
     }
+    
+    
 }

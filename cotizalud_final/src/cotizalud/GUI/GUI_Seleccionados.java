@@ -27,6 +27,22 @@ public class GUI_Seleccionados extends JTable implements TableModelListener{
 
     private JLabel total;
     private DefaultTableModel dtm;
+
+    public JLabel getTotal() {
+        return total;
+    }
+
+    public void setTotal(JLabel total) {
+        this.total = total;
+    }
+
+    public DefaultTableModel getDtm() {
+        return dtm;
+    }
+
+    public void setDtm(DefaultTableModel dtm) {
+        this.dtm = dtm;
+    }
     private TableModelListener dtl;
 
     public GUI_Seleccionados() {
