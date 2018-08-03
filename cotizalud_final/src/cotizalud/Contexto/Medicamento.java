@@ -8,8 +8,8 @@ package cotizalud.Contexto;
 /**
  * Clase medicamento del contexto problema
  */
-public class Medicamento{
-    
+public class Medicamento {
+
     private int codigo;
     private String medicamento;
     private String dosis;
@@ -24,11 +24,12 @@ public class Medicamento{
     /**
      * Constructor sin parametros de Medicamento
      */
-    public Medicamento(){
+    public Medicamento() {
     }
 
     /**
-     *Constructor con parametros de Medicamento
+     * Constructor con parametros de Medicamento
+     *
      * @param codigo Codigo del medicamento
      * @param medicamento Medicamento del medicamento
      * @param dosis Dosis del medicamento
@@ -52,9 +53,13 @@ public class Medicamento{
         this.comuna = comuna;
         this.region = region;
     }
-    
+    public void toObject(){
+        Object[] h;
+    }
+
     /**
      * Retorna codigo del medicamento
+     *
      * @return este codigo
      */
     public int getCodigo() {
@@ -63,6 +68,7 @@ public class Medicamento{
 
     /**
      * Edita el codigo del medicamento
+     *
      * @param codigo Codigo del medicamento
      */
     public void setCodigo(int codigo) {
@@ -212,5 +218,7 @@ public class Medicamento{
     public void setRegion(String region) {
         this.region = region;
     }
-          
+
 }
+//traer clase buscador aca y setear los valores encontrados por el metodo respuesta a los atributos,luego con el get de cada atributo agregar estos datos a cada fila y con esto setear el defaulttablemodel
+

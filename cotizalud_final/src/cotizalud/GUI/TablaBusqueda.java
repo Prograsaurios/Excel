@@ -7,10 +7,11 @@ package cotizalud.GUI;
 
 import cotizalud.Datos.Reporte;
 import cotizalud.Contexto.Medicamento;
-import cotizalud.Datos.Buscador;
+import cotizalud.Contexto.Buscador;
 import cotizalud.Datos.DB;
 import cotizalud.GUI.util.*;
 import java.awt.Component;
+import java.awt.Font;
 import java.io.File;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -36,6 +37,7 @@ import org.edisoncor.gui.util.WindowDragger;
  */
 public class TablaBusqueda extends JFrame {
     DefaultTableModel seleccionados;
+    Font titulo = new Font("Consolas", Font.PLAIN, 10);
 
     /**
      * Creates new form Probando
@@ -45,6 +47,8 @@ public class TablaBusqueda extends JFrame {
         this.setLocationRelativeTo(null);
         this.setTitle("Cotizalud");
         seleccionados = loadSeleccionados();
+        tabla.setFont(titulo);
+       
     }
 
     public DefaultTableModel loadMedicamentos(String region, String medicamento, String farmacia) {
@@ -101,7 +105,6 @@ public class TablaBusqueda extends JFrame {
         dtm.addColumn("REGIÓN");
         dtm.addColumn("CANTIDAD");
         dtm.addColumn("PRECIO TOTAL");
-
         tabla1
                 .setDefaultRenderer(Object.class,
                         new DefaultTableCellRenderer() {
@@ -197,7 +200,7 @@ public class TablaBusqueda extends JFrame {
         filler6 = new javax.swing.Box.Filler(new java.awt.Dimension(8, 0), new java.awt.Dimension(8, 0), new java.awt.Dimension(8, 32767));
         campoMedicamento = new javax.swing.JTextField();
         filler8 = new javax.swing.Box.Filler(new java.awt.Dimension(16, 0), new java.awt.Dimension(16, 0), new java.awt.Dimension(16, 32767));
-        jLabel3 = new javax.swing.JLabel();
+        tFarmacia = new javax.swing.JLabel();
         filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(8, 0), new java.awt.Dimension(8, 0), new java.awt.Dimension(8, 32767));
         cFarmacias = new javax.swing.JComboBox<>();
         btnAgregar = new javax.swing.JButton();
@@ -213,6 +216,8 @@ public class TablaBusqueda extends JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(51, 255, 51));
         setMinimumSize(new java.awt.Dimension(780, 450));
+        setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(1000, 700));
 
         jPanel4.setBackground(new java.awt.Color(0, 153, 153));
 
@@ -238,6 +243,7 @@ public class TablaBusqueda extends JFrame {
                 return canEdit [columnIndex];
             }
         });
+        tabla.setMaximumSize(new java.awt.Dimension(214, 16));
         tabla.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(tabla);
         if (tabla.getColumnModel().getColumnCount() > 0) {
@@ -332,8 +338,8 @@ public class TablaBusqueda extends JFrame {
         jPanel1.add(campoMedicamento);
         jPanel1.add(filler8);
 
-        jLabel3.setText("Farmacia");
-        jPanel1.add(jLabel3);
+        tFarmacia.setText("Farmacia");
+        jPanel1.add(tFarmacia);
         jPanel1.add(filler2);
 
         cFarmacias.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cruz Verde", "Ahumada", "Salcobrand", "Dr.Simi" }));
@@ -399,7 +405,7 @@ public class TablaBusqueda extends JFrame {
                         .addComponent(btnEliminar)
                         .addGap(18, 18, 18)
                         .addComponent(btnReporte)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 335, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 171, Short.MAX_VALUE)
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(Total, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -433,7 +439,7 @@ public class TablaBusqueda extends JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 807, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 710, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -600,7 +606,6 @@ public class TablaBusqueda extends JFrame {
     private javax.swing.Box.Filler filler8;
     private javax.swing.Box.Filler filler9;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -609,6 +614,7 @@ public class TablaBusqueda extends JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JLabel tFarmacia;
     private javax.swing.JLabel tMedicamento;
     private javax.swing.JLabel tRegion;
     private javax.swing.JTable tabla;

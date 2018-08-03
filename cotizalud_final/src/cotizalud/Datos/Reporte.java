@@ -20,7 +20,7 @@ import java.util.Date;
 
 /**
  *
- * @author raguileoam
+ * @author raguileoam, originally from http://codigoxules.org/java-itext-pdf-creando-pdf-java-itext/
  */
 public class Reporte {
     private static final Font categoryFont = new Font(Font.TIMES_ROMAN, 18,  Font.BOLD);

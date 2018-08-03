@@ -5,7 +5,12 @@
  */
 package cotizalud.Main;
 
+import cotizalud.GUI.GUI_Busqueda;
+import cotizalud.GUI.GUI_Main;
+import cotizalud.GUI.GUI_Medicamentos;
 import cotizalud.GUI.TablaBusqueda;
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
 
 /**
  * Clase principal
@@ -19,7 +24,8 @@ public class Main {
      * @throws java.lang.Exception
      */
     public static void main(String[] args) throws Exception{
-     TablaBusqueda t=new TablaBusqueda();
+     //TablaBusqueda t=new TablaBusqueda();
+     GUI_Main t=new GUI_Main();
      t.setVisible(true);
 
 
