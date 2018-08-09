@@ -25,7 +25,7 @@ public class GUI_Medicamentos extends JTable {
         super();
         this.setAutoCreateRowSorter(true);
         this.getTableHeader().setReorderingAllowed(false);
-        this.setModel(loadMedicamentos("", "", ""));
+        this.setModel(new Tabla_Medicamentos());
     }
 
     /**
