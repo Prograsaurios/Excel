@@ -6,8 +6,6 @@
 package cotizalud.GUI;
 
 import java.awt.BorderLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
@@ -15,7 +13,7 @@ import javax.swing.JPanel;
  *
  * @author raguileoam
  */
-public class GUI_Botones extends JPanel implements ActionListener{
+public class GUI_Botones extends JPanel{
     private JButton btnAgregar;
     private JButton btnEliminar;
     private JButton btnReporte;
@@ -76,20 +74,9 @@ public class GUI_Botones extends JPanel implements ActionListener{
         der.add(btnSalir);
         this.add(izq,BorderLayout.WEST);
         this.add(der,BorderLayout.EAST);
-        btnAgregar.addActionListener(this);
-        btnEliminar.addActionListener(this);
-        btnReporte.addActionListener(this);
-        btnSalir.addActionListener(this);
+ 
     }
 
-    @Override
-    public void actionPerformed(ActionEvent ae) {
-        if (ae.getSource()==getBtnAgregar()){}
-        if (ae.getSource()==getBtnEliminar()){}
-        if (ae.getSource()==getBtnReporte()){}
-        if (ae.getSource()==getBtnSalir()){}
 
-
-    }
     
 }

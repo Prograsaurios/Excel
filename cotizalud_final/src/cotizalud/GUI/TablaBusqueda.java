@@ -28,7 +28,6 @@ import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
-import org.edisoncor.gui.util.WindowDragger;
 
 /**
  *

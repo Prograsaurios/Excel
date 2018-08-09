@@ -28,7 +28,7 @@ public class Medicamento {
     public DB db;
 
     /**
-     *
+     * 
      * @return
      */
     public Statement getConsulta() {
@@ -44,7 +44,7 @@ public class Medicamento {
     }
 
     /**
-     *
+     * 
      * @return
      */
     public DB getDb() {
@@ -83,7 +83,7 @@ public class Medicamento {
     public ResultSet resp(String tabla) throws SQLException{
         String consulta = String.format("SELECT * FROM %s WHERE 1=1 ",tabla);
         if (null != region && !"".endsWith(region)) {
-            consulta = consulta + " AND región like '%" + region.replace("'", "") + "%'";
+            consulta = consulta + " AND región like '%" + region.replace("\'", "''") + "%'";
         }
         if (null != medicamento && !"".endsWith(medicamento)) {
             consulta = consulta + " AND medicamento LIKE '%" + medicamento + "%'";

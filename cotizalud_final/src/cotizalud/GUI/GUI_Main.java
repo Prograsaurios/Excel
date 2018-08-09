@@ -93,6 +93,7 @@ public class GUI_Main extends JFrame implements ActionListener, KeyListener {
         }
         if (ae.getSource() == gBusqueda.getActualizar()) {
             System.out.print("Actualizando...");
+            
             gBusqueda.actualizar();
 
         }

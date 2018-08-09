@@ -46,7 +46,7 @@ public class GUI_Busqueda extends JPanel{
         initPanel();
         this.pCentro=new JPanel();
         this.cFarmacias = new JComboBox<>(new String[] { "Cruz Verde", "Ahumada", "Salcobrand"});
-        this.cRegiones = new JComboBox<>(new String[] { "Arica", "Tarapacá", "Antofagasta", "Atacama", "Coquimbo", "Valparaíso", "Metropolitana", "O'higgins", "Maule", "Bio-bío", "Araucanía", "Los Ríos", "Los Lagos", "Aysén", "Magallanes" });
+        this.cRegiones = new JComboBox<>(new String[] { "Arica", "Tarapacá", "Antofagasta", "Atacama", "Coquimbo", "Valparaíso", "Metropolitana", "O\'higgins", "Maule", "Bio-bío", "Araucanía", "Los Ríos", "Los Lagos", "Aysén", "Magallanes" });
         this.tfMedicamento = new JTextField(20);
         this.lMedicamento = new JLabel("Medicamento");
         this.lFarmacia = new JLabel("Farmacia");

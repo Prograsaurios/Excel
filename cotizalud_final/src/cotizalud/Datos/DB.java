@@ -15,10 +15,6 @@ import java.io.IOException;
  * Clase que conecta base de Datos H2 con el proyecto cotiZalud
  */
 public class DB {
-//SELECT * FROM CSVREAD('~/Documents/NetBeansProjects/cotizalud3/medicamentos.txt',null,'fieldSeparator=;') WHERE MEDICAMENTO='NEURUM';
-//ALTER TABLE TEST ALTER ID INT(10) NOT NULL;
-//ALTER TABLE TEST ADD PRIMARY KEY (ID);
-
     private Connection conn;
     private String url;
 
