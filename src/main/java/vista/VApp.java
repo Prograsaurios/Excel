@@ -195,4 +195,19 @@ public class VApp extends JFrame implements ActionListener, KeyListener, TableMo
         }
     }
 
+    public VMedicamentos getgMeds() {
+        return gMeds;
+    }
+
+    public VSeleccionados getgSelects() {
+        return gSelects;
+    }
+
+    public VBusqueda getgBusqueda() {
+        return gBusqueda;
+    }
+
+    public VBotones getgBotones() {
+        return gBotones;
+    }
 }

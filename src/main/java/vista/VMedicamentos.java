@@ -16,7 +16,7 @@ import java.sql.SQLException;
 /**
  * @author raguileoam
  */
-class VMedicamentos extends JTable {
+public class VMedicamentos extends JTable {
 
     /**
      *

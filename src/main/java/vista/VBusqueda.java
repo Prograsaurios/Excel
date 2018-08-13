@@ -7,7 +7,7 @@ import java.awt.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-class VBusqueda extends JPanel {
+public class VBusqueda extends JPanel {
 
     private JComboBox<String> cFarmacias;
     private JComboBox<String> cRegiones;

@@ -164,7 +164,7 @@ class TablaBusqueda extends JFrame {
             for (int i = 0; i < dtm.getRowCount(); i++) {
                 num = num + (Integer) dtm.getValueAt(i, dtm.findColumn("PRECIO TOTAL"));
             }
-            Total.setText(Integer.toString(num));
+            total.setText(Integer.toString(num));
         });
 
         return dtm;
@@ -219,7 +219,7 @@ class TablaBusqueda extends JFrame {
         btnActualizar = new javax.swing.JButton();
         btnReporte = new javax.swing.JButton();
         JLabel totalText = new JLabel();
-        Total = new javax.swing.JLabel();
+        total = new javax.swing.JLabel();
         JLabel jLabel4 = new JLabel();
 
         FormListener formListener = new FormListener();
@@ -398,7 +398,7 @@ class TablaBusqueda extends JFrame {
 
         totalText.setText("Total Medicamentos Selecionados: $");
 
-        Total.setText("0");
+        total.setText("0");
 
         jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Usuario\\Documents\\NetBeansProjects\\cotiZalud\\cotizalud_final\\icon.gif")); // NOI18N
 
@@ -419,7 +419,7 @@ class TablaBusqueda extends JFrame {
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 171, Short.MAX_VALUE)
                                                 .addComponent(totalText)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(Total, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(total, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(23, 23, 23))
@@ -459,7 +459,7 @@ class TablaBusqueda extends JFrame {
                                                 .addComponent(btnEliminar)
                                                 .addComponent(btnReporte)
                                                 .addComponent(totalText)
-                                                .addComponent(Total)))
+                                                .addComponent(total)))
                                 .addContainerGap())
         );
 
